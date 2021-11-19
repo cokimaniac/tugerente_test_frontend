@@ -13,6 +13,13 @@ async function getRooms() {
     return response.json()
 }
 
+async function getRoom(roomId) {
+    let url = baseUrl + `/${roomId}`
+    let response = await fetch(url, options);
+    return response.json()
+}
+
 module.exports = {
     getRooms,
+    getRoom,
 }
